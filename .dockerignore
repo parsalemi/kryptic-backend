@@ -1,0 +1,16 @@
+node_modules
+dist
+.env.*
+.git
+.gitignore
+README.md
+*.log
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+coverage
+.nyc_output
+*.test.js
+*.spec.js
+docker-compose.override.yml
