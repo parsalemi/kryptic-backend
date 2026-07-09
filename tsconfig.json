@@ -12,9 +12,9 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "removeComments": true,
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    // "sourceMap": true,
+    // "declaration": true,
+    // "declarationMap": true,
 
     "strict": true,
     "noImplicitAny": true,
@@ -48,5 +48,6 @@
   "exclude": [
     "node_modules",
     "dist",
+    "tests"
   ],
 }

@@ -5,20 +5,47 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "tsx watch src/app.ts",
-    "start": "node dist/app.js"
+    "dev": "nodemon --exec ts-node src/app.ts",
+    "start": "node dist/app.js",
+    "migrate": "knex migrate:latest",
+    "migrate:rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "docker:build": "docker build -t kryptic-backend .",
+    "docker:run": "docker run -p 3000:3000 kryptic-backend",
+    "docker:up": "docker-compose up -d --build",
+    "docker:down": "docker-compose down",
+    "docker:clean": "docker volume prune -f",
+    "docker:up:prod": "docker compose up -d --build",
+    "docker:down:prod": "docker compose down",
+    "docker:clean:prod": "docker compose down -v"
+  },
+  "nodemonConfig": {
+    "delay": 0
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "compression": "^1.8.1",
     "cross-env": "^10.1.0",
+    "crypto-js": "^4.2.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
     "helmet": "^8.2.0",
+    "jsonwebtoken": "^9.0.3",
     "knex": "^3.2.10",
-    "socket.io": "^4.8.3"
+    "morgan": "^1.11.0",
+    "multer": "^2.2.0",
+    "node-rsa": "^2.0.0",
+    "pg": "^8.22.0",
+    "qrcode": "^1.5.4",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "speakeasy": "^2.0.0",
+    "uuid": "^14.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.14",
