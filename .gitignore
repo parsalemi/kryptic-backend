@@ -1,3 +1,16 @@
 node_modules
-.env.*
 dist
+
+*.tsbuildinfo
+
+.env.*
+
+uploads
+tests
+*.enc
+
+logs
+*.log
+
+.vscode
+.idea
