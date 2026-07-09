@@ -1,5 +1,5 @@
 {
-  "name": "chat-backend",
+  "name": "kryptic-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -25,7 +25,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "compression": "^1.8.1",
@@ -48,7 +48,20 @@
     "uuid": "^14.0.1"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/compression": "^1.8.1",
+    "@types/cors": "^2.8.19",
+    "@types/crypto-js": "^4.2.2",
+    "@types/express": "^5.0.6",
+    "@types/helmet": "^0.0.48",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/morgan": "^1.9.10",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^26.1.1",
+    "@types/socket.io": "^3.0.1",
+    "@types/uuid": "^10.0.0",
     "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
   }
 }
