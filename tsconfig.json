@@ -10,7 +10,7 @@
     "resolveJsonModule": true,
 
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "./",
     "removeComments": true,
     // "sourceMap": true,
     // "declaration": true,
@@ -43,7 +43,8 @@
     "tsBuildInfoFile": "./dist/.tsbuildinfo"
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "knexfile.ts"
   ],
   "exclude": [
     "node_modules",
