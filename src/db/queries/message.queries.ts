@@ -32,5 +32,6 @@ function cleanOldMessages() {
 export default {
   getMessagesBetweenUsers,
   getUnreadMessages,
-  markMessageAsRead
+  markMessageAsRead,
+  cleanOldMessages
 }
