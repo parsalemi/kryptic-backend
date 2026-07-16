@@ -19,6 +19,16 @@ function markMessageAsRead(messageId: string) {
   });
 }
 
+function cleanOldMessages() {
+  return knex('messages').where('is_read', true)
+  .where('read_at', '<', knex.raw("NOW() - INTERVAL '30 minutes'"))
+  .where('is_deleted', false)
+  .update({
+    is_deleted: true,
+    deleted_at: knex.fn.now()
+  })
+}
+
 export default {
   getMessagesBetweenUsers,
   getUnreadMessages,
